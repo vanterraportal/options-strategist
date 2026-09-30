@@ -1,0 +1,52 @@
+{
+  "name": "@vanterra/options-strategist",
+  "version": "0.1.0",
+  "description": "Turn a plain-English trading view into a priced, fully collateralised multi-leg options strategy. Deterministic rules engine by default, Claude as an optional reader; pricing is always Black-Scholes in code, never the model.",
+  "license": "MIT",
+  "type": "module",
+  "keywords": [
+    "options",
+    "black-scholes",
+    "strategy",
+    "greeks",
+    "payoff",
+    "natural-language",
+    "claude",
+    "vanterra"
+  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./pricing": {
+      "types": "./dist/pricing.d.ts",
+      "import": "./dist/pricing.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "lint": "prettier --check \"{src,test}/**/*.ts\"",
+    "format": "prettier --write \"{src,test}/**/*.ts\"",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "prettier": "^3.9.8",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.7"
+  }
+}
