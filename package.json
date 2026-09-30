@@ -3,6 +3,14 @@
   "version": "0.1.0",
   "description": "Turn a plain-English trading view into a priced, fully collateralised multi-leg options strategy. Deterministic rules engine by default, Claude as an optional reader; pricing is always Black-Scholes in code, never the model.",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vanterraportal/options-strategist.git"
+  },
+  "homepage": "https://github.com/vanterraportal/options-strategist#readme",
+  "bugs": {
+    "url": "https://github.com/vanterraportal/options-strategist/issues"
+  },
   "type": "module",
   "keywords": [
     "options",
