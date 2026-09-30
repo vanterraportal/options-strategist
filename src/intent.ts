@@ -122,7 +122,7 @@ export function parseIntent(input: string, options: ParseOptions = {}): Intent {
     horizonDays <= 7 ? "~1 week" : horizonDays <= 14 ? "~2 weeks" : horizonDays <= 35 ? "~1 month" : "~2 months",
   );
 
-  const q = input.match(/(\d{1,5})\s*(shares|share|contracts|contract|x)\b/i);
+  const q = input.match(/(\d{1,5})\s*(?:\$?[a-z]{1,5}\s+)?(shares|share|contracts|contract|x)\b/i);
   const qty = q ? Math.min(10000, Math.max(1, Number(q[1]))) : 10;
   if (q) signals.push(`${qty} shares`);
 

@@ -19,7 +19,7 @@ const CASES: Array<[string, Expect]> = [
   ],
   [
     "I own 20 AAPL shares and want to protect them this month",
-    { ticker: "AAPL", hedge: true, horizonDays: 30 },
+    { ticker: "AAPL", hedge: true, qty: 20, horizonDays: 30 },
   ],
   ["Neutral SPY for two weeks, collect income", { ticker: "SPY", view: "neutral", income: true, horizonDays: 14 }],
   ["Bearish TSLA, defined risk", { ticker: "TSLA", view: "bearish", capped: true }],
